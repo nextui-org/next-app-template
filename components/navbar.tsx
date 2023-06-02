@@ -34,7 +34,7 @@ export const Navbar = () => {
 		<Input
 			aria-label="Search"
 			classNames={{
-				inputWrapper: "bg-default-400/20 dark:bg-default-500/20",
+				inputWrapper: "bg-default-100",
 				input: "text-sm",
 			}}
 			endContent={
@@ -57,10 +57,10 @@ export const Navbar = () => {
 				<NavbarBrand className="gap-3 max-w-fit">
 					<NextLink className="flex justify-start items-center gap-1" href="/">
 						<Logo />
-            <p className="font-bold text-inherit">ACME</p>
+						<p className="font-bold text-inherit">ACME</p>
 					</NextLink>
 				</NavbarBrand>
-				<div className="hidden lg:flex gap-2 justify-start ml-2">
+				<div className="hidden lg:flex gap-4 justify-start ml-2">
 					{siteConfig.navItems.map((item) => (
 						<NavbarItem key={item.href}>
 							<NextLink
@@ -103,11 +103,9 @@ export const Navbar = () => {
 					<Button
 						isExternal
 						as={Link}
-						className="group text-sm font-normal text-default-600 bg-default-400/20 dark:bg-default-500/20"
+						className="text-sm font-normal text-default-600 bg-default-100"
 						href={siteConfig.links.sponsor}
-						startIcon={
-							<HeartFilledIcon className="text-danger group-data-[hover=true]:animate-heartbeat" />
-						}
+						startIcon={<HeartFilledIcon className="text-danger" />}
 						variant="flat"
 					>
 						Sponsor
@@ -117,25 +115,25 @@ export const Navbar = () => {
 			</NavbarContent>
 			<NavbarMenu>
 				{searchInput}
-        <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                    ? "danger"
-                    : "foreground"
-                }
-                href="#"
-                size="lg"
-              >
-                {item.label}
-              </Link>
-            </NavbarMenuItem>
-          ))}
-        </div>
+				<div className="mx-4 mt-2 flex flex-col gap-2">
+					{siteConfig.navMenuItems.map((item, index) => (
+						<NavbarMenuItem key={`${item}-${index}`}>
+							<Link
+								color={
+									index === 2
+										? "primary"
+										: index === siteConfig.navMenuItems.length - 1
+										? "danger"
+										: "foreground"
+								}
+								href="#"
+								size="lg"
+							>
+								{item.label}
+							</Link>
+						</NavbarMenuItem>
+					))}
+				</div>
 			</NavbarMenu>
 		</NextUINavbar>
 	);
