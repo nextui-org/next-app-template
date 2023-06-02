@@ -60,7 +60,7 @@ export const Navbar = () => {
             <p className="font-bold text-inherit">ACME</p>
 					</NextLink>
 				</NavbarBrand>
-				<div className="hidden lg:flex gap-4 ml-10 justify-start">
+				<div className="hidden lg:flex gap-2 justify-start ml-2">
 					{siteConfig.navItems.map((item) => (
 						<NavbarItem key={item.href}>
 							<NextLink
@@ -80,7 +80,7 @@ export const Navbar = () => {
 
 			<NavbarContent className="flex w-full gap-3 sm:hidden" justify="end">
 				<Link isExternal href={siteConfig.links.github}>
-					<GithubIcon className="text-default-600 dark:text-default-500" />
+					<GithubIcon className="text-default-500" />
 				</Link>
 				<ThemeSwitch />
 			</NavbarContent>
@@ -88,13 +88,13 @@ export const Navbar = () => {
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="end">
 				<NavbarItem className="hidden sm:flex gap-2">
 					<Link isExternal href={siteConfig.links.twitter}>
-						<TwitterIcon className="text-default-600 dark:text-default-500" />
+						<TwitterIcon className="text-default-500" />
 					</Link>
 					<Link isExternal href={siteConfig.links.discord}>
-						<DiscordIcon className="text-default-600 dark:text-default-500" />
+						<DiscordIcon className="text-default-500" />
 					</Link>
 					<Link isExternal href={siteConfig.links.github}>
-						<GithubIcon className="text-default-600 dark:text-default-500" />
+						<GithubIcon className="text-default-500" />
 					</Link>
 					<ThemeSwitch />
 				</NavbarItem>
