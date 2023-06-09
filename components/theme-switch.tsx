@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 import { VisuallyHidden } from "@react-aria/visually-hidden";
-import { SwitchProps, useSwitch } from "@nextui-org/react";
+import { SwitchProps, useSwitch } from "@nextui-org/switch";
 import { useTheme } from "next-themes";
 import clsx from "clsx";
 
@@ -57,7 +57,7 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
 							"bg-transparent",
 							"rounded-lg",
 							"flex items-center justify-center",
-							"group-data-[checked=true]:bg-transparent",
+							"group-data-[selected=true]:bg-transparent",
 							"!text-default-500",
 							"pt-px",
 							"px-0",
