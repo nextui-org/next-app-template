@@ -52,15 +52,15 @@ export const Navbar = () => {
 	);
 
 	return (
-		<NextUINavbar maxWidth="xl" position="sticky">
+		<NextUINavbar maxWidth="xl" position="fixed">
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-				<NavbarBrand className="gap-3 max-w-fit">
+				<NavbarBrand as="li" className="gap-3 max-w-fit">
 					<NextLink className="flex justify-start items-center gap-1" href="/">
 						<Logo />
 						<p className="font-bold text-inherit">ACME</p>
 					</NextLink>
 				</NavbarBrand>
-				<div className="hidden lg:flex gap-4 justify-start ml-2">
+				<ul className="hidden lg:flex gap-4 justify-start ml-2">
 					{siteConfig.navItems.map((item) => (
 						<NavbarItem key={item.href}>
 							<NextLink
@@ -75,11 +75,11 @@ export const Navbar = () => {
 							</NextLink>
 						</NavbarItem>
 					))}
-				</div>
+				</ul>
 			</NavbarContent>
 
 			<NavbarContent className="flex w-full gap-3 sm:hidden" justify="end">
-				<Link isExternal href={siteConfig.links.github}>
+				<Link isExternal href={siteConfig.links.github} aria-label="Github">
 					<GithubIcon className="text-default-500" />
 				</Link>
 				<ThemeSwitch />
@@ -87,13 +87,13 @@ export const Navbar = () => {
 
 			<NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
 				<NavbarItem className="hidden sm:flex gap-2">
-					<Link isExternal href={siteConfig.links.twitter}>
+					<Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
 						<TwitterIcon className="text-default-500" />
 					</Link>
-					<Link isExternal href={siteConfig.links.discord}>
+					<Link isExternal href={siteConfig.links.discord} aria-label="Discord">
 						<DiscordIcon className="text-default-500" />
 					</Link>
-					<Link isExternal href={siteConfig.links.github}>
+					<Link isExternal href={siteConfig.links.github} aria-label="Github">
 						<GithubIcon className="text-default-500" />
 					</Link>
 					<ThemeSwitch />
