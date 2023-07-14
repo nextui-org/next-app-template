@@ -52,7 +52,7 @@ export const Navbar = () => {
 	);
 
 	return (
-		<NextUINavbar maxWidth="xl" position="fixed">
+		<NextUINavbar maxWidth="xl" position="sticky">
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 				<NavbarBrand as="li" className="gap-3 max-w-fit">
 					<NextLink className="flex justify-start items-center gap-1" href="/">
@@ -78,14 +78,10 @@ export const Navbar = () => {
 				</ul>
 			</NavbarContent>
 
-			<NavbarContent className="flex w-full gap-3 sm:hidden" justify="end">
-				<Link isExternal href={siteConfig.links.github} aria-label="Github">
-					<GithubIcon className="text-default-500" />
-				</Link>
-				<ThemeSwitch />
-			</NavbarContent>
-
-			<NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
+			<NavbarContent
+				className="hidden sm:flex basis-1/5 sm:basis-full"
+				justify="end"
+			>
 				<NavbarItem className="hidden sm:flex gap-2">
 					<Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
 						<TwitterIcon className="text-default-500" />
@@ -114,10 +110,14 @@ export const Navbar = () => {
 			</NavbarContent>
 
 			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
+				<Link isExternal href={siteConfig.links.github} aria-label="Github">
+					<GithubIcon className="text-default-500" />
+				</Link>
+				<ThemeSwitch />
 				<NavbarMenuToggle />
-      </NavbarContent>
+			</NavbarContent>
 
-      <NavbarMenu>
+			<NavbarMenu>
 				{searchInput}
 				<div className="mx-4 mt-2 flex flex-col gap-2">
 					{siteConfig.navMenuItems.map((item, index) => (
