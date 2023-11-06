@@ -1,4 +1,3 @@
-import NextLink from "next/link";
 import { Link } from "@nextui-org/link";
 import { Snippet } from "@nextui-org/snippet";
 import { Code } from "@nextui-org/code"
@@ -25,7 +24,6 @@ export default function Home() {
 			<div className="flex gap-3">
 				<Link
 					isExternal
-					as={NextLink}
 					href={siteConfig.links.docs}
 					className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}
 				>
@@ -33,7 +31,6 @@ export default function Home() {
 				</Link>
 				<Link
 					isExternal
-					as={NextLink}
 					className={buttonStyles({ variant: "bordered", radius: "full" })}
 					href={siteConfig.links.github}
 				>
