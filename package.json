@@ -9,24 +9,24 @@
 		"lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
 	},
 	"dependencies": {
-		"@nextui-org/button": "2.0.38",
-		"@nextui-org/code": "2.0.33",
-		"@nextui-org/input": "2.2.5",
-		"@nextui-org/kbd": "2.0.34",
-		"@nextui-org/link": "2.0.35",
-		"@nextui-org/listbox": "2.1.27",
-		"@nextui-org/navbar": "2.0.37",
-		"@nextui-org/snippet": "2.0.43",
-		"@nextui-org/switch": "2.0.34",
-		"@nextui-org/system": "2.2.6",
-		"@nextui-org/theme": "2.2.11",
-		"@react-aria/ssr": "3.9.4",
-		"@react-aria/visually-hidden": "3.8.12",
+		"@nextui-org/button": "beta",
+		"@nextui-org/code": "beta",
+		"@nextui-org/input": "beta",
+		"@nextui-org/kbd": "beta",
+		"@nextui-org/link": "beta",
+		"@nextui-org/listbox": "beta",
+		"@nextui-org/navbar": "beta",
+		"@nextui-org/snippet": "beta",
+		"@nextui-org/switch": "beta",
+		"@nextui-org/system": "beta",
+		"@nextui-org/theme": "beta",
+		"@react-aria/ssr": "3.9.6",
+		"@react-aria/visually-hidden": "3.8.17",
 		"clsx": "2.1.1",
-		"framer-motion": "~11.1.1",
+		"framer-motion": "11.11.13",
 		"intl-messageformat": "^10.5.0",
-		"next": "14.2.4",
-		"next-themes": "^0.2.1",
+		"next": "canary",
+		"next-themes": "0.4.3",
 		"react": "18.3.1",
 		"react-dom": "18.3.1"
 	},
@@ -52,5 +52,9 @@
 		"tailwindcss": "3.4.3",
 		"typescript": "5.6.3",
 		"prettier": "3.3.3"
+	},
+	"overrides": {
+		"react": "$react",
+		"react-dom": "$react-dom"
 	}
 }
